@@ -401,6 +401,56 @@ function result7(){
 		}
 	}
 }
+// ===========================
+// 	for Chamestry 2nd Pepar
+// ===========================
+function result8(){
+
+	var _tm=document.getElementById("tm8").value;
+	var _pm=document.getElementById("pm8").value;
+
+	if(_tm=="" || _pm==""){
+		alert("tm and pm field on be empty");
+	}
+	else{
+		var result=parseInt(_tm)+parseInt(_pm);
+		document.getElementById("ttm8").value=result;
+		if (result >=80 && result <= 100) {
+			document.getElementById("grade8").value="A+";
+			document.getElementById("point8").value="5.00";
+		}
+		else if (result >=70 && result <= 79) {
+			document.getElementById("grade8").value="A";
+			document.getElementById("point8").value="4.00";
+		}
+		else if (result >=60 && result <= 69) {
+			document.getElementById("grade8").value="A-";
+			document.getElementById("point8").value="3.50";
+		}
+		else if (result >=50 && result <= 59) {
+			document.getElementById("grade8").value="B";
+			document.getElementById("point8").value="3.00";
+		}
+		else if (result >=40 && result <= 49) {
+			document.getElementById("grade8").value="C";
+			document.getElementById("point8").value="2.00";
+		}
+		else if (result >=33 && result <= 39) {
+			document.getElementById("grade8").value="D";
+			document.getElementById("point8").value="1.00";
+		}
+		else if (result >=0 && result <= 32) {
+			document.getElementById("grade8").value="F";
+			document.getElementById("point8").value="0.00";
+		}
+		else{
+			alert("Invalid Input");
+			document.getElementById("tm8").value="0";
+			document.getElementById("pm8").value="0";
+			document.getElementById("ttm8").value="0";
+		}
+	}
+}
 
 function finalResult(){
 	if(document.getElementById("grade").value == "F" || document.getElementById("grade1").value == "F" || document.getElementById("grade2").value == "F")
